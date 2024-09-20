@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - A.S. Electronics</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"> </script>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .products-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .products-item {
+            flex: 0 0 23%; 
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        .products-item img {
+    width: 100%;
+    height: 100%; /* Ensures the image covers the full container */
+    object-fit: contain; /* Ensures the image scales without being cropped */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transform-origin: center center; /* Keeps the image centered while zooming */
+}
+
+.products-item:hover img {
+    transform: scale(1.2); /* Scales the image up */
+    box-shadow: 0 15px 25px rgb(11, 11, 11);
+}
+
+        .products-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .products-item:hover .overlay {
+            opacity: 1;
+        }
+        .products-item .overlay h5 {
+            margin: 0;
+            padding: 10px;
+            font-size: 18px;
+        }
+        .products-item .overlay .btn {
+            margin-top: 10px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+        .products-item .overlay .btn:hover {
+            background-color: #069be6;
+            color: #fff;
+        }
+        .overlay .btn {
+            position: relative; /* Ensure buttons move within their container */
+            display: inline-block; /* Ensure proper layout */
+        }
+
+        @media (max-width: 768px) {
+    .products-item {
+        flex: 0 0 48%;
+    }
+}
+
+@media (max-width: 576px) {
+    .products-item {
+        flex: 0 0 100%;
+    }
+}
+
+
+        /* *{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            /* font-weight: bold;} */
+
+    </style>
+</head>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Animate buttons on hover
+        $('.overlay .btn').hover(function() {
+            if ($(this).hasClass('add-to-cart')) {
+                $(this).stop().animate({marginLeft: '20px'}, 300);
+            } else if ($(this).hasClass('buy-now')) {
+                $(this).stop().animate({marginRight: '20px'}, 300);
+            }
+        }, function() {
+            $(this).stop().animate({marginLeft: '0', marginRight: '0'}, 300);
+        });
+    });
+</script>
+
+
+<body>
+
+    <header>
+        <nav id="nav">
+            <div class="logo-container">
+                <img src="images/logo2.JPG" alt="A.S. Electronics Logo">
+                <h1 class="cmpny-name">A.S. Electronics</h1> 
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+
+             <!-- Cart Image -->
+             <a href="cart.html" class="cart-icon">
+                <img src="images/cart.png" alt="Cart">
+            </a>
+            
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="products">
+        <div class="products">
+            <div class="products-label">
+                <h4>Mobile Products</h4>
+                <a href="#">Go to shop</a>
+            </div>
+            <div class="products-list">
+                <!-- Existing Mobile Products with Hover Effect and Buttons -->
+                <div class="products-item">
+                    <img src="images/i11.jpg" alt="iPhone 11">
+                    <div class="overlay">
+                        <h5>iPhone 11 - $600</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/i12.jpg" alt="iPhone 12">
+                    <div class="overlay">
+                        <h5>iPhone 12 - $750</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/i13.jpg" alt="iPhone 13">
+                    <div class="overlay">
+                        <h5>iPhone 13 - $850</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/i14.jpg" alt="iPhone 14">
+                    <div class="overlay">
+                        <h5>iPhone 14 - $999</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <!-- New Mobile Products -->
+                <div class="products-item">
+                    <img src="images/r13.jpg" alt="Remdmi">
+                    <div class="overlay">
+                        <h5>Redmi Note 13 Pro - $299</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/s24.jpg" alt="Samsung Galaxy S24">
+                    <div class="overlay">
+                        <h5>Samsung Galaxy S24 - $1299</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/g8.jpg" alt="Google Pixel 8 Pro">
+                    <div class="overlay">
+                        <h5>Google Pixel 8 Pro - $999</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/i8.jfif" alt="iPhone 7">
+                    <div class="overlay">
+                        <h5>iPhone 7 - $499</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/r11.jpg" alt="Redmi 11 Pro">
+                    <div class="overlay">
+                        <h5>Redmi 11 Pro - $499</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/iq9jpg.jpg" alt="IQ Z9">
+                    <div class="overlay">
+                        <h5>IQ Z9 - $399</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/re14.jpg" alt="Realme 14">
+                    <div class="overlay">
+                        <h5>Realme 14 - $750</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/OPPO_F27_Pro+.jpg" alt="Oppo F27 Pro">
+                    <div class="overlay">
+                        <h5>Oppo F27 Pro - $499</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repeat the same structure for Smartwatch Products and Audio Products -->
+        <div class="products">
+            <div class="products-label">
+                <h4>Smartwatch Products</h4>
+                <a href="#">Go to shop</a>
+            </div>
+            <div class="products-list">
+                <div class="products-item">
+                    <img src="images/iw1.0.jpg" alt="iWatch 4">
+                    <div class="overlay">
+                        <h5>iWatch 4 - $420</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/iw2.0.webp" alt="iWatch 4 Pro">
+                    <div class="overlay">
+                        <h5>iWatch 4 Pro - $420</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/iw3.0.jpg" alt="iWatch 3">
+                    <div class="overlay">
+                        <h5>iWatch 3 - $300</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/iw4.0.webp" alt="iWatch 5">
+                    <div class="overlay">
+                        <h5>iWatch 5 - $620</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/iw-se.webp" alt="iWatch SE">
+                    <div class="overlay">
+                        <h5>iWatch SE - $450</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/sam4.jpg" alt="Samsung Galaxy Watch 4">
+                    <div class="overlay">
+                        <h5>Samsung Galaxy Watch 4 - $499</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/tt.webp" alt="Garmin Forerunner 945">
+                    <div class="overlay">
+                        <h5>Garmin Forerunner 945 - $600</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/ff.jpg" alt="Firebolt Ultra Watch">
+                    <div class="overlay">
+                        <h5>Firebolt Ultra Watch - $649</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="products-label">
+                <h4>Audio Products</h4>
+                <a href="#">Go to shop</a>
+            </div>
+            <div class="products-list">
+                <div class="products-item">
+                    <img src="images/earbuds1.jpg" alt="Jabra Elite 4">
+                    <div class="overlay">
+                        <h5>Jabra Elite 4 - $879</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/earbuds2.webp" alt="Jabra Elite 3">
+                    <div class="overlay">
+                        <h5>Jabra Elite 3 - $649</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/earbuds3.jpg" alt="OnePlus Buds Pro">
+                    <div class="overlay">
+                        <h5>OnePlus Buds Pro - $549</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/earbuds4.jpg" alt="Boult Mustang Earbuds">
+                    <div class="overlay">
+                        <h5>Boult Mustang Earbuds - $399</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/sony.jpg" alt="Sony WF-1000XM4">
+                    <div class="overlay">
+                        <h5>Sony WF-1000XM4 - $280</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/bose.jpg" alt="Bose QuietComfort Earbuds">
+                    <div class="overlay">
+                        <h5>Bose QuietComfort Earbuds - $450</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/bose1.jpg" alt="Beats Powerbeats Pro">
+                    <div class="overlay">
+                        <h5>Beats Powerbeats Pro - $499</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/airpods.jpg" alt="Apple AirPods Pro">
+                    <div class="overlay">
+                        <h5>Apple AirPods Pro - $750</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/sen.webp" alt="Sennheiser Momentum True Wireless 3">
+                    <div class="overlay">
+                        <h5>Sennheiser Momentum True Wireless 3 - $650</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/jbl.jpg" alt="JBL Free X">
+                    <div class="overlay">
+                        <h5>JBL Free X - $520</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/candy.webp" alt="Skullcandy Indy ANC">
+                    <div class="overlay">
+                        <h5>Skullcandy Indy ANC - $440</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/sound.jpg" alt="Anker Soundcore Liberty 3 Pro">
+                    <div class="overlay">
+                        <h5>Anker Soundcore Liberty 3 Pro - $380</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="products-label">
+                <h4>Laptop Products</h4>
+                <a href="product.html">See more</a>
+            </div>
+            <div class="products-list">
+                <div class="products-item">
+                    <img src="images/laptop1.jpg" alt="Laptop 1">
+                    <div class="overlay">
+                        <h5>HP Envy x360 - $1,200</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/laptop2.webp" alt="Laptop 2">
+                    <div class="overlay">
+                        <h5>Apple Macbook Air - $999</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/laptop3.jpg" alt="Laptop 3">
+                    <div class="overlay">
+                        <h5>Asus Rog Strix G-16 - $1,500</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/laptop4.webp" alt="Laptop 4">
+                    <div class="overlay">
+                        <h5>ASUS ROG Zephyrus Duo - $3,500</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/laptop5.jpg" alt="Laptop 5">
+                    <div class="overlay">
+                        <h5>Lenovo ideapad 3 - $749</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/laptop6.jpg" alt="Laptop 6">
+                    <div class="overlay">
+                        <h5>HP Laptop 16 - $999</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/laptop7.jpg" alt="Laptop 7">
+                    <div class="overlay">
+                        <h5>Lenovo thinkpad 4 - $849</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <div class="products-item">
+                    <img src="images/laptop8.jpg" alt="Laptop 8">
+                    <div class="overlay">
+                        <h5>Lenovo YOGA 3 - $1,499</h5>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Modal for confirmation -->
+    <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modal-message"></p>
+    </div>
+    </div>
+  
+
+    <footer id="footer">
+        <div class="footer-content">
+            <h3>A.S. Electronics</h3>
+            <p>Your one-stop shop for all your electronic needs.</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+            </ul>
+            <p>Created by Aman Shaikh</p>
+            <p>© Copyright 2024</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Menu Toggle -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script> -->
+
+</body>
+</html>

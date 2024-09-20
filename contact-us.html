@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AS Electronics</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-container img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .logo-container h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+        }
+        
+        header {
+            background: #0e0e0e;
+            color: #fff;
+        }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        header .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        header .nav-links li {
+            margin: 0 10px;
+        }
+        header .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+        header .nav-links a:hover {
+            background: white;
+            color: black;
+        }
+        main {
+            padding: 20px;
+            background-color: #ddd;
+            min-height: 100vh;
+        }
+        .contact {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 72px;
+        }
+        .contact-info, .contact-form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .contact-info div, .contact-form div {
+            flex: 0 0 48%;
+            margin-bottom: 20px;
+        }
+        .contact-info p, .contact-info a {
+            margin: 5px 0;
+        }
+        .contact-info a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .contact-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #0066cc;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: black;
+        }
+        footer {
+            background: #080808;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="images/logo2.JPG" alt="A.S. Electronics Logo">
+                <h1 class="cmpny-name">A.S. Electronics</h1> 
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact">
+            <h1>Contact Us</h1><hr>
+            <div class="contact-info">
+                <div>
+                    <p><strong>Customer Support:</strong></p>
+                    <p>Phone: 1-800-123-4567</p>
+                    <p>Email: <a href="mailto:support@yourelectronics.com">support@yourelectronics.com</a></p>
+
+                    <p><strong>Address:</strong></p>
+                    <p>AS Electronics Inc.</p>
+                    <p>1214 Tech Avenue</p>
+                    <p>Bandra, Mumbai-400052</p>
+                </div>
+                <div>
+                    <p><strong>Business Inquiries:</strong></p>
+                    <p>Phone: 1-800-765-4321</p>
+                    <p>Email: <a href="mailto:business@yourelectronics.com">business@yourelectronics.com</a></p>
+
+                    <p><strong>Office Hours:</strong></p>
+                    <p>Monday to Friday: 9:00 AM - 6:00 PM (EST)</p>
+                    <p>Saturday: 10:00 AM - 4:00 PM (EST)</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+
+            <form id="contactForm" class="contact-form">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div>
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div style="flex: 0 0 100%;">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div style="flex: 0 0 100%; text-align: center;">
+                    <button type="submit">Submit</button>
+                </div>
+                <p id="responseMessage"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Follow us on social media:</p>
+        <a href="https://facebook.com" target="_blank">Facebook</a> |
+        <a href="https://twitter.com" target="_blank">Twitter</a> |
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <p>Created by Aman Shaikh</p>
+        <p>© Copyright 2024</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phonePattern = /^[\d\-\+\(\)\s]+$/; // Basic phone number validation
+
+            let errors = [];
+
+            if (!name || !email || !subject || !message) {
+                errors.push('Please fill out all required fields.');
+            }
+
+            if (email && !emailPattern.test(email)) {
+                errors.push('Please enter a valid email address.');
+            }
+
+            if (phone && !phonePattern.test(phone)) {
+                errors.push('Please enter a valid phone number.');
+            }
+
+            if (errors.length > 0) {
+                document.getElementById('responseMessage').textContent = errors.join(' ');
+                document.getElementById('responseMessage').style.color = 'red';
+            } else {
+                document.getElementById('responseMessage').textContent = 'Thank you for your message! We will get back to you soon.';
+                document.getElementById('responseMessage').style.color = 'green';
+                document.getElementById('contactForm').reset();
+            }
+        });
+    </script>
+</body>
+</html>

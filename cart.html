@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - A.S. Electronics</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        .cart-container {
+            padding: 20px;
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 5%;
+        }
+        
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .cart-item img {
+            width: 80px;
+            height: auto;
+            margin-right: 20px;
+        }
+        
+        .cart-item h3 {
+            font-size: 1.2em;
+            margin: 0;
+        }
+        
+        .cart-item p {
+            font-size: 1em;
+            margin: 5px 0;
+        }
+        
+        .cart-total {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: right;
+        }
+        
+        .cart-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav id="nav">
+            <div class="logo-container">
+                <img src="images/logo3.JPG" alt="A.S. Electronics Logo">
+                <h1 class="cmpny-name">A.S. Electronics</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+
+            <a href="cart.html" class="cart-icon">
+                <img src="images/ogcart.png" alt="Cart">
+                <span class="badge">3</span> <!-- Example cart item count -->
+            </a>
+            
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart-container">
+            <h2>Your Cart</h2>
+
+            <!-- Cart Item Example -->
+            <div class="cart-item">
+                <img src="images/i11.jpg" alt="iPhone 11">
+                <div class="cart-item-info">
+                    <h3>iPhone 11</h3>
+                    <p>$600</p>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="images/i12.jpg" alt="iPhone 12">
+                <div class="cart-item-info">
+                    <h3>iPhone 12</h3>
+                    <p>$750</p>
+                </div>
+            </div>
+            <!-- Add more cart items here -->
+
+            <div class="cart-total">
+                Total: $1350
+            </div>
+
+            <div class="cart-buttons">
+                <a href="checkout.html" class="btn btn-primary">Checkout</a>
+                <button id="clear-cart">Clear Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <h3>A.S. Electronics</h3>
+            <p>Your one-stop shop for all your electronic needs.</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+            </ul>
+            <p>Created by Aman Shaikh</p>
+            <p>© Copyright 2024</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('clear-cart').addEventListener('click', function() {
+            if (confirm('Are you sure you want to clear the cart?')) {
+                // Clear the cart functionality here
+                // For now, just reload the page
+                location.reload();
+            }
+        });
+    </script>
+
+</body>
+</html>

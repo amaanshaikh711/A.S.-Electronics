@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .cmpny-name{
+            color:white;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: #0b0b0b;
+            color: #fff;
+            z-index: 1000;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 40px; /* Adjust size as needed */
+            margin-right: 10px;
+        }
+
+        .logo-container h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: whitesmoke;
+            color: black;
+        }
+
+        .about-us {
+            margin: 100px auto;
+            width: 90%;
+            max-width: 1200px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-us h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-us p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .about-us .section {
+            margin-bottom: 40px;
+        }
+
+        .about-us .team {
+            display: block;
+            text-align: center;
+        }
+
+        .about-us .team-member {
+            width: 100%;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .about-us .team-member img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .about-us .team-member h3 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .about-us .team-member p {
+            font-size: 1em;
+            color: #777;
+            text-align: center;
+        }
+
+        footer {
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo2.JPG" alt="A.S. Electronics Logo">
+            <h1 class="cmpny-name">A.S. Electronics</h1> 
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-us">
+        <h1>About Us</h1>
+        <p>Welcome to A.S. Electronics, where we are committed to delivering excellence in every product we offer. Our journey began with a passion for technology and a vision to bring innovative solutions to the market. Since our inception in [Year], we have grown into a leading provider of cutting-edge electronic products that enhance everyday life.</p>
+
+        <div class="section">
+            <h2>Our Story</h2>
+            <p>Founded by Aman Shaikh and his partners, A.S. Electronics started as a small startup with a big dream: to revolutionize the electronics industry with high-quality, reliable products. From our humble beginnings, we have steadily expanded our product range and our reach. Our story is one of dedication, innovation, and a commitment to our customers. Every milestone we achieve is a testament to our unwavering dedication to excellence.</p>
+        </div>
+
+        <div class="section">
+            <h2>Our Mission</h2>
+            <p>Our mission is to bring the best products to the market and ensure our customers always have access to the latest and most reliable solutions. We strive to exceed expectations through continuous improvement and unparalleled customer service. Our team works tirelessly to ensure that each product meets the highest standards of quality and performance.</p>
+        </div>
+
+        <div class="section">
+            <h2>Our Vision</h2>
+            <p>We believe in the power of technology to transform lives. Our vision is to be at the forefront of the electronics industry, offering products that not only meet but exceed our customers' expectations. We are dedicated to continuous improvement and innovation, ensuring that you always have access to the latest and most advanced technology. Our goal is to set new standards for quality, innovation, and sustainability in the electronics industry.</p>
+        </div>
+
+        <div class="section">
+            <h2>Meet Our Team</h2>
+            <div class="team-member">
+                <img src="images/AS.jpeg" alt="Aman Shaikh">
+                <h3>Aman Shaikh</h3>
+                <p>CEO & Founder</p>
+            </div>
+            <div class="team-member">
+                <img src="images/bro.JPG" alt="Sajeeed Shaikh">
+                <h3>Sajeeed Shaikh</h3>
+                <p>Chief Operating Officer</p>
+            </div>
+            <div class="team-member">
+                <img src="images/farhan3.jpeg" alt="Farhan Akhtar">
+                <h3>Farhan Akhtar</h3>
+                <p>Marketing Director</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+        </ul>
+        <p>&copy; 2024 A.S. Electronics. All rights reserved.</p>
+    </footer>
+</body>
+</html>
