@@ -117,6 +117,7 @@ header {
     background-color: whitesmoke;
     color: black;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 .menu-toggle {
@@ -726,4 +727,134 @@ header {
   .info{
     color:rgba(192, 192, 192, 0.774);
   }
-  
+
+  /* Footer Styles */
+  #footer {
+    background-color: #1a1a1a; /* Dark background */
+    color: #ffffff; /* White text */
+    padding: 40px 20px; /* Padding around the footer */
+    text-align: center; /* Center text */
+    font-family: 'Arial', sans-serif; /* Font style */
+}
+
+.footer-content {
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center the content */
+}
+
+.footer h3 {
+    font-size: 2em; /* Title size */
+    margin-bottom: 10px; /* Spacing below title */
+}
+
+.footer-content a {
+    color: #ffffff; /* Default text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px; /* Add padding */
+    display: inline-block; /* Ensure padding works without affecting layout */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    border-radius: 10px;
+}
+
+.footer-content a:hover {
+    background-color: white; /* Background color on hover */
+    color: black; /* Color on hover */
+    border-radius: 10px;
+}
+
+.social-media {
+    text-align: center; /* Center text and icons */
+    display: inline;
+}
+
+.social-media a {
+    margin: 0 10px; /* Space between icons */
+}
+
+.social-media img {
+    width: 32px; /* Set width of favicons */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-media img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+/* new hover social icons styling */
+/* Social Media Section Specific Styles */
+.social-media {
+    text-align: center; /* Center text in the social media section */
+    margin: 20px 0; /* Add some margin around the section */
+}
+
+.social-media ul {
+    display: flex; /* Align icons in a row */
+    justify-content: center; /* Center the icons horizontally */
+    padding: 0; /* Remove default padding */
+}
+
+.social-media ul li {
+    list-style: none; /* Remove bullet points */
+}
+
+.social-media ul li a {
+    width: 80px; /* Set width for each icon */
+    height: 80px; /* Set height for each icon */
+    background-color: #fff; /* Background color */
+    text-align: center; /* Center the text/icon */
+    line-height: 80px; /* Center the icon vertically */
+    font-size: 35px; /* Font size of the icon */
+    margin: 0 10px; /* Space between icons */
+    display: block; /* Make links block elements */
+    border-radius: 50%; /* Make the icons circular */
+    position: relative; /* Required for positioning */
+    overflow: hidden; /* Hide overflow */
+    border: 3px solid #fff; /* Border around the icon */
+    z-index: 1; /* Ensure the icon is on top */
+}
+
+.social-media ul li a .icon {
+    position: relative; /* Required for hover effect */
+    color: #262626; /* Initial icon color */
+    transition: .5s; /* Transition effect for color */
+    z-index: 3; /* Keep icon above background */
+}
+
+.social-media ul li a:hover .icon {
+    color: #fff; /* Change icon color on hover */
+    transform: rotateY(360deg); /* Rotate icon */
+}
+
+.social-media ul li a:before {
+    content: ""; /* Create a pseudo-element */
+    position: absolute; /* Position absolutely */
+    top: 100%; /* Start below the icon */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: #f00; /* Default background color */
+    transition: .5s; /* Transition effect */
+    z-index: 2; /* Keep below the icon */
+}
+
+.social-media ul li a:hover:before {
+    top: 0; /* Move the background up on hover */
+}
+
+.social-media ul li:nth-child(1) a:before {
+    background: #3b5999; /* Facebook color */
+}
+
+.social-media ul li:nth-child(2) a:before {
+    background: #55acee; /* Twitter color */
+}
+
+.social-media ul li:nth-child(3) a:before {
+    background: #0077b5; /* LinkedIn color */
+}
+
+.social-media ul li:nth-child(4) a:before {
+    background: #dd4b39; /* Google+ color */
+}
